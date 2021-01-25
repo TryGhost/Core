@@ -38,6 +38,6 @@ To add a new package to the repo:
     - Also updates any packages which depend on changed packages
 
 
-# Copyright & License 
+# Copyright & License
 
-Copyright (c) 2021 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2013-2021 Ghost Foundation - Released under the [MIT license](LICENSE).

@@ -1,5 +1,5 @@
 # Core
-
+Containing packages tightly integrated with Ghost's core functionality.
 ## Install
 
 

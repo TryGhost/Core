@@ -32,12 +32,12 @@ describe('MaintenanceApp', function () {
     it('Serves a 503 from root route', function () {
         return request.get('/')
             .expect(503)
-            .expect(/Maintenance/);
+            .expect(/We'll be right back./);
     });
 
     it('Serves a 503 from non root route', function () {
         return request.get('/hello')
             .expect(503)
-            .expect(/Maintenance/);
+            .expect(/We'll be right back./);
     });
 });

@@ -287,6 +287,14 @@
   dependencies:
     "@elastic/elasticsearch" "^7.10.0"
 
+"@tryghost/errors@^0.2.11":
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/@tryghost/errors/-/errors-0.2.11.tgz#db42d49c6e703b46efa2097cfafcf3d401789c07"
+  integrity sha512-OKVaefe6YxNZkhsJzqvzBs4wFA4XCkqcguzJikK6qGaJ+w1hjqGLOab9d1AJ8bLCVFTzptv24jjT/CHY9g5Ojg==
+  dependencies:
+    ghost-ignition "^4.6.1"
+    lodash "^4.17.21"
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
@@ -464,6 +472,11 @@ binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
+
+bluebird@3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
+  integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
 
 body-parser@1.19.0:
   version "1.19.0"
@@ -1449,7 +1462,7 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-ghost-ignition@^4.4.3:
+ghost-ignition@^4.4.3, ghost-ignition@^4.6.1:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/ghost-ignition/-/ghost-ignition-4.6.2.tgz#c88166eb93bfcc94408c84783c62838111154b71"
   integrity sha512-ls78Gr5pbwjzMySo7eYmAW4aOAjbNHxM54GKucFrTeOoGZHgGlOaXJMhCwLD68UW9ZD35yXsU9KhzSnNpUhemg==
@@ -2043,6 +2056,11 @@ mocha@8.4.0:
     yargs "16.2.0"
     yargs-parser "20.2.4"
     yargs-unparser "2.0.0"
+
+moment@2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 moment@2.27.0:
   version "2.27.0"

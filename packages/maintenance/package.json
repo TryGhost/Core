@@ -1,6 +1,6 @@
 {
   "name": "@tryghost/maintenance",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": "https://github.com/TryGhost/Core/tree/main/packages/maintenance",
   "author": "Ghost Foundation",
   "license": "MIT",

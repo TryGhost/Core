@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const debug = require('ghost-ignition').debug('maintenance:app');
+const debug = require('@tryghost/debug')('maintenance:app');
 
 class MaintenanceApp {
     /**

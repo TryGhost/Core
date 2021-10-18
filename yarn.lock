@@ -217,7 +217,7 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@elastic/elasticsearch@^7.10.0":
+"@elastic/elasticsearch@^7.15.0":
   version "7.15.0"
   resolved "https://registry.yarnpkg.com/@elastic/elasticsearch/-/elasticsearch-7.15.0.tgz#4b009a87e0b11b8cfd2e4f378f0292574bc17300"
   integrity sha512-FUKvjV2IKtIiWsvBy7D+wLbSEONsmNR15RRN7P/Sb30g4ObZRHH2qGOP5PPnzxdntEkzZ8HzY7nKKXFS+3Du1g==
@@ -304,12 +304,21 @@
     "@tryghost/root-utils" "^0.3.4"
     debug "^4.3.1"
 
-"@tryghost/elasticsearch-bunyan@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@tryghost/elasticsearch-bunyan/-/elasticsearch-bunyan-0.1.1.tgz#5a36d81dd020825dd563b1357ae6c249580c46f5"
-  integrity sha512-ILhumzdwJNoRG44S0FkgzZQlkCYioTKWEiY+FFFQpTFWwZ3Jd5a6us5k8tEsd+Wf2rZOvul/ehV45j2c2l1BMw==
+"@tryghost/debug@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@tryghost/debug/-/debug-0.1.8.tgz#3d97634a14fd463a9a590a335e79f4d1f2cf189c"
+  integrity sha512-vgf3n+wcaOxmuA7RhBl8YiG4cRQcHg7+XkQfJ2OzgUVm8XZaPlCfT5IagBT1q0sNThdS8fglFKFupcHZO5ZggA==
   dependencies:
-    "@elastic/elasticsearch" "^7.10.0"
+    "@tryghost/root-utils" "^0.3.6"
+    debug "^4.3.1"
+
+"@tryghost/elasticsearch@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@tryghost/elasticsearch/-/elasticsearch-0.1.2.tgz#a2d25ddbd7a9ab7a1a42b32cad7147fc264aaf9d"
+  integrity sha512-jAGTegtGc0P80uOpzHQpA9XERDanKxAkD4rSOhX3gOOqGsTVYIDUERssTrID7dFcCWXSMShOVdYPqDirtAQfVQ==
+  dependencies:
+    "@elastic/elasticsearch" "^7.15.0"
+    "@tryghost/debug" "^0.1.8"
 
 "@tryghost/errors@^0.2.11":
   version "0.2.16"
@@ -327,14 +336,15 @@
     lodash "^4.17.21"
     uuid "^8.3.2"
 
-"@tryghost/logging@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/@tryghost/logging/-/logging-0.1.7.tgz#22fbff99bc880402691e8836f550348df1c797d8"
-  integrity sha512-8EM2lCT9E7zt6SlGwlAlQQ7Nwoq2vXgU9C5KFBV/2rbMgnsVsNOwdPGgixozxNNczxYFkTHF5mpQg/+3oV2GjQ==
+"@tryghost/logging@^0.2.0":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@tryghost/logging/-/logging-0.2.2.tgz#b77ff4a203073d5172520379754da7c098bc266d"
+  integrity sha512-phZxz9dWQicLeOnMRxx0yXkhXO2rqey2o+BdIPerS06bnRQBrwHXUKyG1M/aRTojCx5ptbTKT3DmhY0ZPtDRCA==
   dependencies:
     "@tryghost/bunyan-rotating-filestream" "^0.0.7"
-    "@tryghost/elasticsearch-bunyan" "^0.1.1"
-    "@tryghost/root-utils" "^0.3.4"
+    "@tryghost/elasticsearch" "^0.1.2"
+    "@tryghost/pretty-stream" "^0.1.1"
+    "@tryghost/root-utils" "^0.3.6"
     bunyan "^1.8.15"
     bunyan-loggly "^1.4.2"
     fs-extra "^9.1.0"
@@ -344,10 +354,27 @@
     moment "^2.29.1"
     prettyjson "^1.2.1"
 
+"@tryghost/pretty-stream@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@tryghost/pretty-stream/-/pretty-stream-0.1.1.tgz#8be18694f3081424c0efb832fa32469d5891356b"
+  integrity sha512-+FYAVozEmYctaVI+4xEhRnpep0xSnGL7FiT91dffxTLx2QVQxI1qADD9Dfb9EzIYIDRttUKoZJ4xzrVpnzD0WQ==
+  dependencies:
+    lodash "^4.17.21"
+    moment "^2.29.1"
+    prettyjson "^1.2.1"
+
 "@tryghost/root-utils@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@tryghost/root-utils/-/root-utils-0.3.4.tgz#621bc9564ba3fa78ac1a066f3794f501cf85e055"
   integrity sha512-7ExJfA7m5s8djpe8d7ij/rvLZbZ6O9i/HvG7PHCTvDoilyINUW1xwBgsGR2cUmKwLO3dilYYxaQfvRJXB0VwBA==
+  dependencies:
+    caller "^1.0.1"
+    find-root "^1.1.0"
+
+"@tryghost/root-utils@^0.3.6":
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/@tryghost/root-utils/-/root-utils-0.3.6.tgz#424b012fe94f68f4c137a510a4929639e5281a3a"
+  integrity sha512-fLUKGxpiwBQ8UCpxkbhT4L4VBRha8nU1YMOnWVdRa2LQPtaZ8+Nvs9LsAm86p1Qjsdr6x5PrNwpy5HBHEdNsYA==
   dependencies:
     caller "^1.0.1"
     find-root "^1.1.0"
